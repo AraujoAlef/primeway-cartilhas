@@ -2,121 +2,211 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Primeway Viagens \u2013 Cartilhas do Viajante</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Primeway Viagens – Central de Cartilhas</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-:root{
-  --navy:#1B2A4A;--gold:#C9952A;--gold-light:#E8B84B;
-  --white:#fff;--gray:#F4F6FA;--text:#2C3E50;
-}
+:root{--navy:#1B2A4A;--gold:#C9952A;--gold-light:#E8B84B;--white:#fff;--gray:#F4F6FA;--text:#2C3E50;}
 body{font-family:'Nunito',sans-serif;background:#0f172a;min-height:100vh;color:var(--text);}
 
 /* HERO */
-.hero{
-  background:linear-gradient(160deg,#0f172a 0%,var(--navy) 60%,#1a3a5c 100%);
-  padding:48px 40px 52px;position:relative;overflow:hidden;text-align:center;
-}
-.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;
-  background:radial-gradient(circle,rgba(201,149,42,0.1) 0%,transparent 70%);border-radius:50%;}
-.hero::after{content:'';position:absolute;bottom:-120px;left:-60px;width:350px;height:350px;
-  background:radial-gradient(circle,rgba(201,149,42,0.06) 0%,transparent 70%);border-radius:50%;}
-.hero-inner{position:relative;z-index:1;max-width:800px;margin:0 auto;}
-.hero-logo{height:80px;width:auto;margin-bottom:22px;filter:drop-shadow(0 4px 20px rgba(201,149,42,0.3));}
-.eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:10px;}
-.hero-title{font-family:'Playfair Display',serif;font-size:38px;font-weight:900;color:var(--white);line-height:1.15;margin-bottom:12px;}
+.hero{background:linear-gradient(160deg,#0f172a 0%,var(--navy) 70%);padding:48px 24px 52px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(201,149,42,0.1) 0%,transparent 70%);border-radius:50%;}
+.hero::after{content:'';position:absolute;bottom:-120px;left:-60px;width:350px;height:350px;background:radial-gradient(circle,rgba(201,149,42,0.06) 0%,transparent 70%);border-radius:50%;}
+.hero-inner{position:relative;z-index:1;max-width:700px;margin:0 auto;}
+
+/* LOGO TEXT (sem imagem) */
+.logo-block{margin-bottom:24px;}
+.logo-p{font-family:'Playfair Display',serif;font-size:52px;font-weight:900;color:var(--white);line-height:1;}
+.logo-p span{color:var(--gold);}
+.logo-sub{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:4px;}
+
+.hero-eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:12px;}
+.hero-title{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;color:var(--white);line-height:1.2;margin-bottom:12px;}
 .hero-title em{color:var(--gold);font-style:normal;}
-.hero-sub{font-size:14px;color:rgba(255,255,255,0.55);font-weight:600;max-width:480px;margin:0 auto 32px;line-height:1.7;}
-.stats{display:flex;justify-content:center;gap:44px;flex-wrap:wrap;}
-.stat-num{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--gold);line-height:1;}
-.stat-label{font-size:10px;color:rgba(255,255,255,0.4);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:3px;}
+.hero-sub{font-size:14px;color:rgba(255,255,255,0.55);font-weight:600;line-height:1.7;max-width:480px;margin:0 auto 32px;}
+
+.stats{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;}
+.stat-num{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:var(--gold);}
+.stat-lbl{font-size:10px;color:rgba(255,255,255,0.4);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:2px;}
+
 .gold-bar{height:4px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold-light),var(--gold),transparent);}
 
 /* MAIN */
-.main{max-width:920px;margin:0 auto;padding:44px 20px 60px;}
+.main{max-width:920px;margin:0 auto;padding:40px 20px 60px;}
 
-/* SECTION HEADER */
-.sec-hdr{display:flex;align-items:center;gap:12px;margin-bottom:24px;}
+.sec-hdr{display:flex;align-items:center;gap:12px;margin-bottom:22px;}
 .sec-hdr h2{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--white);}
-.sec-hdr .line{flex:1;height:1px;background:rgba(255,255,255,0.07);}
-.sec-hdr .badge{background:rgba(201,149,42,0.15);border:1px solid rgba(201,149,42,0.3);
-  border-radius:20px;padding:3px 13px;font-size:10px;font-weight:800;color:var(--gold);
-  letter-spacing:1px;text-transform:uppercase;}
+.sec-line{flex:1;height:1px;background:rgba(255,255,255,0.07);}
+.sec-badge{background:rgba(201,149,42,0.15);border:1px solid rgba(201,149,42,0.3);border-radius:20px;padding:3px 12px;font-size:10px;font-weight:800;color:var(--gold);letter-spacing:1px;text-transform:uppercase;}
 
-/* CARDS GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px;margin-bottom:50px;}
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-bottom:48px;}
 
-.card{
-  background:linear-gradient(145deg,#1e2d47,#162238);
-  border:1px solid rgba(255,255,255,0.07);border-radius:18px;
-  padding:24px 22px;display:flex;flex-direction:column;
-  text-decoration:none;position:relative;overflow:hidden;
-  transition:transform 0.22s,box-shadow 0.22s,border-color 0.22s;
-}
-.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:linear-gradient(90deg,var(--gold),transparent);opacity:0;transition:opacity 0.22s;}
-.card:hover{transform:translateY(-5px);box-shadow:0 18px 48px rgba(0,0,0,0.4);border-color:rgba(201,149,42,0.22);}
+/* CARD */
+.card{background:linear-gradient(145deg,#1e2d47,#162238);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;text-decoration:none;position:relative;overflow:hidden;transition:transform .22s,box-shadow .22s,border-color .22s;}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.35);border-color:rgba(201,149,42,0.22);}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--card-accent,var(--gold)),transparent);opacity:0;transition:opacity .22s;}
 .card:hover::before{opacity:1;}
-.card.disabled{opacity:0.45;cursor:default;pointer-events:none;}
 
-.card-icon{width:50px;height:50px;border-radius:13px;display:flex;align-items:center;justify-content:center;
-  font-size:22px;margin-bottom:14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);}
-.card-status{position:absolute;top:18px;right:18px;font-size:9px;font-weight:800;
-  letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px;}
-.s-ready{background:rgba(39,174,96,0.15);color:#2ecc71;border:1px solid rgba(46,204,113,0.25);}
-.s-soon{background:rgba(201,149,42,0.1);color:var(--gold);border:1px solid rgba(201,149,42,0.2);}
+.card-icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);}
+.card-status{position:absolute;top:18px;right:18px;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:20px;}
+.s-ready{background:rgba(39,174,96,0.15);color:#2ecc71;border:1px solid rgba(46,204,113,0.2);}
 
-.card-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;
-  color:var(--white);margin-bottom:7px;line-height:1.3;}
+.card-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--white);margin-bottom:7px;line-height:1.3;}
 .card-desc{font-size:12px;color:rgba(255,255,255,0.45);font-weight:600;line-height:1.6;margin-bottom:16px;flex:1;}
-.card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px;}
-.tag{font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;
-  background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.35);border:1px solid rgba(255,255,255,0.07);}
-.card-footer{display:flex;align-items:center;justify-content:space-between;
-  padding-top:12px;border-top:1px solid rgba(255,255,255,0.06);}
+.card-tags{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:16px;}
+.tag{font-size:10px;font-weight:700;padding:3px 8px;border-radius:20px;background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.35);border:1px solid rgba(255,255,255,0.07);}
+.card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid rgba(255,255,255,0.06);}
 .card-action{font-size:12px;font-weight:800;color:var(--gold);display:flex;align-items:center;gap:5px;}
-.arrow{width:20px;height:20px;background:rgba(201,149,42,0.15);border-radius:50%;
-  display:flex;align-items:center;justify-content:center;font-size:10px;
-  transition:transform 0.18s,background 0.18s;}
-.card:hover .arrow{transform:translateX(3px);background:rgba(201,149,42,0.3);}
-.card-action-off{font-size:12px;font-weight:800;color:rgba(255,255,255,0.18);}
-.card-pages{font-size:10px;color:rgba(255,255,255,0.2);font-weight:600;}
+.arrow{width:20px;height:20px;background:rgba(201,149,42,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;transition:transform .2s;}
+.card:hover .arrow{transform:translateX(2px);}
+.card-page{font-size:10px;color:rgba(255,255,255,0.2);font-weight:600;}
 
 /* HOW TO */
-.how{background:linear-gradient(135deg,#1a2740,#162238);border:1px solid rgba(255,255,255,0.07);
-  border-radius:20px;padding:32px 36px;margin-bottom:44px;}
-.how-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--white);margin-bottom:6px;}
+.how{background:linear-gradient(135deg,#1a2740,#162238);border:1px solid rgba(255,255,255,0.07);border-radius:18px;padding:32px 36px;margin-bottom:48px;}
+.how-title{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--white);margin-bottom:6px;}
 .how-sub{font-size:12px;color:rgba(255,255,255,0.35);font-weight:600;margin-bottom:24px;}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
-@media(max-width:600px){.steps{grid-template-columns:1fr 1fr;}}
-.step{text-align:center;}
-.step-num{width:38px;height:38px;border-radius:50%;background:rgba(201,149,42,0.15);
-  border:2px solid rgba(201,149,42,0.3);display:flex;align-items:center;justify-content:center;
-  font-family:'Playfair Display',serif;font-size:17px;font-weight:900;color:var(--gold);margin:0 auto 10px;}
-.step-title{font-size:12px;font-weight:800;color:var(--white);margin-bottom:4px;}
-.step-desc{font-size:10.5px;color:rgba(255,255,255,0.35);font-weight:600;line-height:1.5;}
+.how-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+@media(max-width:580px){.how-steps{grid-template-columns:1fr 1fr;}}
+.hstep{text-align:center;}
+.hnum{width:36px;height:36px;border-radius:50%;background:rgba(201,149,42,0.15);border:2px solid rgba(201,149,42,0.3);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:17px;font-weight:900;color:var(--gold);margin:0 auto 10px;}
+.htitle{font-size:12px;font-weight:800;color:var(--white);margin-bottom:4px;}
+.hdesc{font-size:10px;color:rgba(255,255,255,0.35);font-weight:600;line-height:1.5;}
 
 /* FOOTER */
-.footer{background:linear-gradient(135deg,#0a1020,#0f172a);
-  border-top:1px solid rgba(255,255,255,0.05);padding:28px 40px;text-align:center;}
-.footer img{height:38px;margin:0 auto 14px;display:block;opacity:0.75;}
-.footer-text{font-size:11px;color:rgba(255,255,255,0.25);font-weight:600;line-height:1.7;}
-.footer-text strong{color:var(--gold);}
-.divider{width:50px;height:2px;background:var(--gold);margin:14px auto;opacity:0.35;border-radius:2px;}
+.footer{background:#080f1c;border-top:1px solid rgba(255,255,255,0.05);padding:28px 24px;text-align:center;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:var(--white);margin-bottom:6px;}
+.footer-logo span{color:var(--gold);}
+.footer-txt{font-size:11px;color:rgba(255,255,255,0.25);font-weight:600;line-height:1.7;}
+.footer-div{width:40px;height:2px;background:var(--gold);margin:12px auto;opacity:0.35;border-radius:2px;}
 </style>
 </head>
 <body>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
-    <img src="logo.png" class="hero-logo" alt="Primeway Viagens">
-    <div class="eyebrow">\u2708\ufe0f Central de Materiais do Viajante</div>
-    <h1 class="hero-title">Cartilhas <em>Primeway</em><br>para seus clientes</h1>
-    <p class="hero-sub">Materiais exclusivos para entregar junto com cada pacote de viagem. Diferencial que encanta e fideliza clientes!</p>
+    <div class="logo-block">
+      <div class="logo-p">PRIME<span>WAY</span></div>
+      <div class="logo-sub">Viagens</div>
+    </div>
+    <div class="hero-eyebrow">✈️ Central de Cartilhas</div>
+    <h1 class="hero-title">Materiais <em>exclusivos</em><br>para seus clientes</h1>
+    <p class="hero-sub">Cartilhas informativas para entregar junto com cada pacote de viagem. Preencha, imprima e encante seu cliente!</p>
     <div class="stats">
-      <div class="stat"><div class="stat-num">8</div><div class="stat-label">Cartilhas</div></div>
-      <div class="stat"><div class="stat-num">3</div><div class="stat-label">Cias. A\u00e9reas</div></div>
-      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Personaliz\u00e1vel</div></div>
-      
+      <div><div class="stat-num">8</div><div class="stat-lbl">Cartilhas</div></div>
+      <div><div class="stat-num">3</div><div class="stat-lbl">Cias. Aéreas</div></div>
+      <div><div class="stat-num">100%</div><div class="stat-lbl">Personalizável</div></div>
+      <div><div class="stat-num">PDF</div><div class="stat-lbl">Pronto p/ imprimir</div></div>
+    </div>
+  </div>
+</div>
+<div class="gold-bar"></div>
+
+<div class="main">
+
+  <div class="sec-hdr">
+    <h2>📋 Todas as Cartilhas</h2>
+    <div class="sec-line"></div>
+    <div class="sec-badge">✅ Prontas</div>
+  </div>
+
+  <div class="grid">
+
+    <a class="card" href="guia-bagagem-primeway.html">
+      <div class="card-status s-ready">Pronta</div>
+      <div class="card-icon">🧳</div>
+      <div class="card-title">Guia Completo de Bagagem</div>
+      <div class="card-desc">Regras Azul, GOL e LATAM. Dimensões, pesos, taxas de excesso e dicas para família.</div>
+      <div class="card-tags"><span class="tag">Azul</span><span class="tag">GOL</span><span class="tag">LATAM</span><span class="tag">Nacional</span><span class="tag">Internacional</span></div>
+      <div class="card-footer"><div class="card-action">Abrir <span class="arrow">→</span></div><div class="card-page">A4</div></div>
+    </a>
+
+    <a class="card" href="cartilha-nao-pode-mala.html">
+      <div class="card-status s-ready">Pronta</div>
+      <div class="card-icon">🚫</div>
+      <div class="card-title">O que NÃO pode na Mala</div>
+      <div class="card-desc">Itens proibidos na cabine e no porão, regra dos líquidos e alertas de alfândega.</div>
+      <div class="card-tags"><span class="tag">Cabine</span><span class="tag">Porão</span><span class="tag">Líquidos</span><span class="tag">Alfândega</span></div>
+      <div class="card-footer"><div class="card-action">Abrir <span class="arrow">→</span></div><div class="card-page">A4</div></div>
+    </a>
+
+    <a class="card" href="guia-aeroporto.html">
+      <div class="card-status s-ready">Pronta</div>
+      <div class="card-icon">✈️</div>
+      <div class="card-title">Guia do Aeroporto</div>
+      <div class="card-desc">Horários, passo a passo do embarque, raio-X, apps essenciais e o que fazer se o voo atrasar.</div>
+      <div class="card-tags"><span class="tag">Nacional</span><span class="tag">Internacional</span><span class="tag">Embarque</span></div>
+      <div class="card-footer"><div class="card-action">Abrir <span class="arrow">→</span></div><div class="card-page">A4</div></div>
+    </a>
+
+    <a class="card" href="documentos-viagem.html">
+      <div class="card-status s-ready">Pronta</div>
+      <div class="card-icon">📄</div>
+      <div class="card-title">Documentos para Viagem</div>
+      <div class="card-desc">Checklist de documentos por destino, passaporte, visto, crianças e extras recomendados.</div>
+      <div class="card-tags"><span class="tag">Passaporte</span><span class="tag">Visto</span><span class="tag">Crianças</span></div>
+      <div class="card-footer"><div class="card-action">Abrir <span class="arrow">→</span></div><div class="card-page">A4</div></div>
+    </a>
+
+    <a class="card" href="o-que-levar-mala.html">
+      <div class="card-status s-ready">Pronta</div>
+      <div class="card-icon">👜</div>
+      <div class="card-title">O que Levar na Mala</div>
+      <div class="card-desc">Listas por tipo de viagem: praia, frio, cidade. Com dicas para família e casal.</div>
+      <div class="card-tags"><span class="tag">Praia</span><span class="tag">Frio</span><span class="tag">Cidade</span><span class="tag">Família</span></div>
+      <div class="card-footer"><div class="card-action">Abrir <span class="arrow">→</span></div><div class="card-page">A4</div></div>
+    </a>
+
+    <a class="card" href="farmacinha-viagem.html">
+      <div class="card-status s-ready">Pronta</div>
+      <div class="card-icon">💊</div>
+      <div class="card-title">Farmacinha de Viagem</div>
+      <div class="card-desc">Medicamentos essenciais, vacinas por destino e o que fazer se adoecer fora do Brasil.</div>
+      <div class="card-tags"><span class="tag">Saúde</span><span class="tag">Vacinas</span><span class="tag">Emergência</span></div>
+      <div class="card-footer"><div class="card-action">Abrir <span class="arrow">→</span></div><div class="card-page">A4</div></div>
+    </a>
+
+    <a class="card" href="seguranca-destino.html">
+      <div class="card-status s-ready">Pronta</div>
+      <div class="card-icon">🔒</div>
+      <div class="card-title">Segurança no Destino</div>
+      <div class="card-desc">Golpes mais comuns, proteção de pertences, segurança financeira e emergências.</div>
+      <div class="card-tags"><span class="tag">Segurança</span><span class="tag">Golpes</span><span class="tag">Emergência</span></div>
+      <div class="card-footer"><div class="card-action">Abrir <span class="arrow">→</span></div><div class="card-page">A4</div></div>
+    </a>
+
+    <a class="card" href="guia-hotel-transfer.html">
+      <div class="card-status s-ready">Pronta</div>
+      <div class="card-icon">🏨</div>
+      <div class="card-title">Guia do Hotel & Transfer</div>
+      <div class="card-desc">Check-in/out, gorjetas por país, o que conferir no quarto e como acionar o transfer.</div>
+      <div class="card-tags"><span class="tag">Hotel</span><span class="tag">Transfer</span><span class="tag">Check-in</span></div>
+      <div class="card-footer"><div class="card-action">Abrir <span class="arrow">→</span></div><div class="card-page">A4</div></div>
+    </a>
+
+  </div>
+
+  <!-- COMO USAR -->
+  <div class="how">
+    <div class="how-title">🎯 Como usar as cartilhas</div>
+    <div class="how-sub">Simples, rápido e profissional — em 4 passos</div>
+    <div class="how-steps">
+      <div class="hstep"><div class="hnum">1</div><div class="htitle">Abra a cartilha</div><div class="hdesc">Clique no card desejado</div></div>
+      <div class="hstep"><div class="hnum">2</div><div class="htitle">Escolha o tipo</div><div class="hdesc">Nacional ou Internacional</div></div>
+      <div class="hstep"><div class="hnum">3</div><div class="htitle">Preencha os dados</div><div class="hdesc">Nome, destino, voo e data</div></div>
+      <div class="hstep"><div class="hnum">4</div><div class="htitle">Imprima ou PDF</div><div class="hdesc">Entregue ao cliente 😊</div></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-logo">PRIME<span>WAY</span></div>
+  <div class="footer-div"></div>
+  <div class="footer-txt">Central de Cartilhas — Materiais desenvolvidos com carinho para encantar cada cliente ✈️</div>
+</div>
+
+</body>
+</html>
